@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Add Task</title>
+</head>
+<body>
+    <nav class="nav"><a class="nav-home" href="{{ url_for('dashboard') }}">Home</a></nav>
+    
+    <div class="form-container">
+        <h1 class="big-text">Simon says, what are we working on today?</h1>
+        
+        <form id="task-form" method="POST" action="{{ url_for('save_task') }}">
+            <input class="task-input" type="text" name="task" id="task-input" placeholder="Enter your task here: " required autofocus>
+        </form>
+    </div>
+    </div>
+        <img src="{{ url_for('static', filename='/image0.jpg-removebg-preview.png') }}" alt="Health Image" class="image">
+    </div>
+
+</body>
+</html>
